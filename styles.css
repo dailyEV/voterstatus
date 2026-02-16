@@ -24,7 +24,15 @@ h1 {
 #tagline {
   text-align: center;
   color: #4a5568;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#callout {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #c53030;
+  margin-bottom: 1.5rem;
 }
 
 #search {
@@ -154,17 +162,75 @@ h1 {
   width: 100%;
 }
 
-/* mobile: stack as list */
+/* mobile */
 @media (max-width: 700px) {
-  #app { max-width: 600px; }
-  #results { flex-direction: column; }
-  #results li { max-width: 100%; }
+  body { padding: 1rem 0.6rem; }
+
+  h1 { font-size: 1.35rem; margin-bottom: 0.25rem; }
+  #tagline { font-size: 0.85rem; margin-bottom: 1rem; }
+
+  #banner {
+    padding: 0.6rem 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+  #banner strong { font-size: 0.9rem; }
+  #banner span { font-size: 0.72rem; }
+
+  #search {
+    font-size: 1rem;
+    padding: 0.7rem 0.85rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+
+  #results { flex-direction: column; gap: 0.25rem; }
+  #results li {
+    max-width: 100%;
+    border-radius: 8px;
+    flex-basis: auto;
+  }
   #results li a {
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     text-align: left;
-    padding: 0.7rem 1rem;
-    gap: 0.75rem;
+    padding: 0.4rem 0.55rem;
+    position: relative;
+    height: auto;
   }
-  .flag { width: 40px; height: 27px; }
-  .state-name { font-size: 0.95rem; flex: 1; }
+
+  .flag { width: 28px; height: 19px; border-radius: 2px; flex-shrink: 0; }
+
+  .state-name {
+    font-size: 0.85rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .code {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.35rem;
+    font-size: 0.5rem;
+  }
+
+  .note {
+    font-size: 0.55rem;
+    width: 100%;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .deadline {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+    width: 100%;
+    text-align: left;
+    font-size: 0.6rem;
+    color: #718096;
+  }
+
+  #footer { margin-top: 1.5rem; font-size: 0.75rem; }
 }
