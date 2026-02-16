@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voter Registration Lookup</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="app">
+    <h1>Check Your Voter Registration</h1>
+    <p id="tagline">Find your state's official registration lookup.</p>
+    <div id="banner">
+      <strong>2026 General Election: November 3, 2026</strong>
+      <span>Dates shown on each card are the registration deadline for your state.</span>
+    </div>
+
+    <input type="text" id="search" placeholder="Search by state..." autocomplete="off" autofocus>
+
+    <ul id="results"></ul>
+    <p id="no-results" hidden>No matching state found.</p>
+
+    <p id="footer">Links go to each state's official election office website.</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
